@@ -5,6 +5,8 @@ Author: Federico Bonato
 1. How has the average cinema ticket price evolved over the years across different German states?
 2. Which federal states have seen the highest and lowest number of cinema visits per inhabitant over time?
 3. Is there a relationship between average ticket prices and the number of cinema visits per inhabitant in each state?
+4. How does the number of cinemas and screens in a region relate to the number of cinema visitors?
+5. How is the number of residents in a region related to the number of cinema visitors?
 
 ## Suitable Analysis Methods
 
@@ -25,3 +27,5 @@ Author: Federico Bonato
 - `pandas`: For data cleaning and processing.
 - `matplotlib.pyplot`: For visualizations (lineplot, barplot, scatterplot).
 - `scipy.stats.pearsonr`: To calculate correlation between ticket price and attendance.
+- `numpy`: For numeric operations and manual correlation if needed.
+
