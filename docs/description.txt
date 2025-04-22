@@ -1,0 +1,27 @@
+Author: Federico Bonato
+
+## Research Questions
+
+1. How has the average cinema ticket price evolved over the years across different German states?
+2. Which federal states have seen the highest and lowest number of cinema visits per inhabitant over time?
+3. Is there a relationship between average ticket prices and the number of cinema visits per inhabitant in each state?
+
+## Suitable Analysis Methods
+
+1. Line Plot:
+   - To show the development of average ticket prices over time per state.
+   - X-axis: Year, Y-axis: Average ticket price (EUR), Lines: Different states.
+
+2. Bar Plot / Line Plot / Heatmap:
+   - To compare cinema visits per inhabitant across states and years.
+   - Grouped bar plots or a heatmap can highlight high/low attendance patterns.
+
+3. Scatter Plot:
+   - To explore the relationship between ticket prices and cinema visits per inhabitant.
+   - X-axis: Average ticket price, Y-axis: Cinema visits per inhabitant.
+
+## Python Packages / Functions
+
+- `pandas`: For data cleaning and processing.
+- `matplotlib.pyplot`: For visualizations (lineplot, barplot, scatterplot).
+- `scipy.stats.pearsonr`: To calculate correlation between ticket price and attendance.
