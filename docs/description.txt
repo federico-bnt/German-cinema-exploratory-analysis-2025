@@ -1,31 +1,78 @@
-Author: Federico Bonato
+# Cinema Attendance and Ticket Prices in Germany: An Exploratory Data Analysis
+
+**Author:** Federico Bonato  
+**Date:** April 2025
+
+## Introduction
+
+This project explores cinema attendance patterns and ticket pricing across different federal states of Germany over time.  
+The analysis aims to answer key questions regarding how cinema habits and infrastructure vary geographically and temporally,
+and whether economic factors like ticket prices are correlated with audience behavior.
+
+---
 
 ## Research Questions
 
-1. How has the average cinema ticket price evolved over the years across different German states?
-2. Which federal states have seen the highest and lowest number of cinema visits per inhabitant over time?
-3. Is there a relationship between average ticket prices and the number of cinema visits per inhabitant in each state?
-4. How does the number of cinemas and screens in a region relate to the number of cinema visitors?
-5. How is the number of residents in a region related to the number of cinema visitors?
+1. **Evolution of Ticket Prices:**  
+   How has the average cinema ticket price evolved over the years across different German states?
+
+2. **Cinema Attendance Patterns:**  
+   Which federal states have seen the highest and lowest number of cinema visits per inhabitant over time?
+
+3. **Ticket Price vs. Attendance:**  
+   Is there a relationship between average ticket prices and the number of cinema visits per inhabitant in each state?
+
+4. **Infrastructure vs. Attendance:**  
+   How does the number of cinemas and screens in a region relate to the number of cinema visitors?
+
+5. **Population vs. Attendance:**  
+   How is the number of residents in a region related to the number of cinema visitors?
+
+---
 
 ## Suitable Analysis Methods
 
-1. Line Plot:
-   - To show the development of average ticket prices over time per state.
-   - X-axis: Year, Y-axis: Average ticket price (EUR), Lines: Different states.
+To investigate these questions, the following visual and statistical methods are applied:
 
-2. Bar Plot / Line Plot / Heatmap:
-   - To compare cinema visits per inhabitant across states and years.
-   - Grouped bar plots or a heatmap can highlight high/low attendance patterns.
+- **Line Plot:**  
+  To visualize the evolution of average ticket prices and cinema attendance over time for each federal state, highlighting both overall and regional trends.  
+  (X-axis: Year, Y-axis: Price or Attendance, Lines: Federal States)
 
-3. Scatter Plot:
-   - To explore the relationship between ticket prices and cinema visits per inhabitant.
-   - X-axis: Average ticket price, Y-axis: Cinema visits per inhabitant.
+- **Bar Plot / Heatmap:**  
+  To compare cinema visits per inhabitant across states and years, making it easy to spot regional differences and temporal patterns.
 
-## Python Packages / Functions
+- **Scatter Plot:**  
+  To explore relationships between:
+  - Average ticket prices and cinema visits per inhabitant.
+  - Number of cinemas/screens vs. number of cinema visitors.
+  - Population size vs. cinema visits.
+  
+  These allow visual assessment of correlations and group distinctions (e.g., urban vs. rural).
 
-- `pandas`: For data cleaning and processing.
-- `matplotlib.pyplot`: For visualizations (lineplot, barplot, scatterplot).
-- `scipy.stats.pearsonr`: To calculate correlation between ticket price and attendance.
-- `numpy`: For numeric operations and manual correlation if needed.
+- **Polynomial Trend Analysis:**  
+  To model non-linear patterns in ticket prices and attendance that linear models may miss.
+
+- **Spearman Correlation & Correlation Heatmaps:**  
+  To quantify and visualize the strength and direction of monotonic relationships between key variables, useful when distributions are not normal.
+
+- **Lollipop Chart:**  
+  To summarize average annual percentage changes across main metrics, offering an accessible view of long-term industry trends.
+
+---
+
+## Python Packages / Custom Functions Used
+
+- `pandas`: Data manipulation and preprocessing.
+- `matplotlib.pyplot` and `seaborn`: For a wide variety of visualizations.
+- `numpy`: Mathematical and statistical operations.
+- `scipy.stats`: For correlation analysis, including Spearman's rank correlation.
+- Custom plotting functions:
+  - `plot_polynomial_trends`: Polynomial regression plots for trend analysis.
+  - `compute_avg_annual_pct_change`: Calculates annual percentage change in key metrics.
+  - `plot_price_attendance_over_time`: Visualizes relationship between price and attendance over time.
+  - `print_spearman_correlation`: Computes and prints Spearman correlations for chosen variables.
+
+By combining these techniques, this exploratory analysis provides detailed insights into how cinema infrastructure, pricing, and attendance have evolved and interacted over time across Germany.
+
+---
 
